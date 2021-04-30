@@ -1,0 +1,51 @@
+﻿@model Lagerverwaltung.Model.DatabaseModels.Lagerbewegung
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Lagerbewegung</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Geschäftsfall.GeschäftsfallId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Geschäftsfall.GeschäftsfallId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lagerartikel.L_Bezeichnung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lagerartikel.L_Bezeichnung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vorgangstyp.Vorgang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vorgangstyp.Vorgang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.B_Menge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.B_Menge)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LagerbewegungId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
